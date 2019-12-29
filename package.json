@@ -1,0 +1,35 @@
+{
+  "name": "mortcalc",
+  "version": "1.0.0",
+  "description": "Simple mortgage calculator",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "icons": "node node_modules/png2icons/png2icons-cli.js assets/mortcalc-icon.png assets/mortcalc-icon -allwe -bc -i",
+    "package-mac": "npm run icons && electron-packager . --overwrite --platform=darwin --arch=x64 --icon=assets/mortcalc-icon.icns --prune=true --out=release-builds",
+    "package-win": "npm run icons && electron-packager . image-server-gui --overwrite --asar --platform=win32 --arch=ia32 --icon=assets/mortcalc-icon.ico --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"MortCalc\"",
+    "package-linux": "npm run icons && electron-packager . image-server-gui --overwrite --asar --platform=linux --arch=x64 --icon=assets/mortcalc-icon.png --prune=true --out=release-builds"
+
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kevinaangstadt/mortcalc.git"
+  },
+  "author": "Kevin Angstadt <angstadt@umich.edu>",
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/kevinaangstadt/mortcalc/issues"
+  },
+  "homepage": "https://github.com/kevinaangstadt/mortcalc#readme",
+  "devDependencies": {
+    "electron": "^7.1.7",
+    "electron-packager": "^14.1.1",
+    "png2icons": "^2.0.1"
+  },
+  "dependencies": {
+    "bootstrap": "^4.4.1",
+    "jquery": "^3.4.1",
+    "popper.js": "^1.16.0"
+  }
+}

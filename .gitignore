@@ -1,3 +1,9 @@
+#release
+release-builds
+
+#macos
+.DS_Store
+
 # Logs
 logs
 *.log
