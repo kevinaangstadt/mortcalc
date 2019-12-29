@@ -21,20 +21,23 @@
         <li class="nav-item">
           <a class="nav-link" id="monthly-tab" data-toggle="tab" href="#calculateMonthly" role="tab" aria-controls="monthly" aria-selected="false">Calculate Monthly</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" id="length-tab" data-toggle="tab" href="#calculateLength" role="tab" aria-controls="length" aria-selected="false">Calculate Length</a>
+        </li>
       </ul>
       <div class="tab-content" id="tabContent">
         <div class="tab-pane fade show active" id="calculatePrincipal" role="tabpanel" aria-labelledby="principal-tab">
           <form class="mb-4 p-4 border" id="principalForm">
             <div class="form-group">
-              <label for="principal">Monthly</label>
+              <label for="p-monthly">Monthly</label>
               <input type="text" class="form-control" id="p-monthly" pattern="^[+-]?([0-9,]+([.][0-9,]*)?|[.][0-9,]+)$" required/>
             </div>
             <div class="form-group">
-              <label for="principal">Rate</label>
+              <label for="p-rate">Rate</label>
               <input type="text" class="form-control" id="p-rate" pattern="^[+-]?([0-9,]+([.][0-9,]*)?|[.][0-9,]+)$" required/>
             </div>
             <div class="form-group">
-              <label for="principal">Length</label>
+              <label for="p-length">Length</label>
               <input type="text" class="form-control" id="p-length" pattern="^[+-]?([0-9,]+([.][0-9,]*)?|[.][0-9,]+)$" required/>
             </div>
             <button type="submit" class="btn btn-primary">Calculate</button>
@@ -48,15 +51,15 @@
         <div class="tab-pane fade" id="calculateMonthly" role="tabpanel" aria-labelledby="monthly-tab">
           <form class="mb-4 p-4 border" id="monthlyForm">
             <div class="form-group">
-              <label for="principal">Principal</label>
+              <label for="m-principal">Principal</label>
               <input type="text" class="form-control" id="m-principal" pattern="^[+-]?([0-9,]+([.][0-9,]*)?|[.][0-9,]+)$" required/>
             </div>
             <div class="form-group">
-              <label for="principal">Rate</label>
+              <label for="m-rate">Rate</label>
               <input type="text" class="form-control" id="m-rate" pattern="^[+-]?([0-9,]+([.][0-9,]*)?|[.][0-9,]+)$" required/>
             </div>
             <div class="form-group">
-              <label for="principal">Length</label>
+              <label for="m-length">Length</label>
               <input type="text" class="form-control" id="m-length" pattern="^[+-]?([0-9,]+([.][0-9,]*)?|[.][0-9,]+)$" required/>
             </div>
             <button type="submit" class="btn btn-primary">Calculate</button>
@@ -65,6 +68,28 @@
           <div class="form-group">
             <label for="outputMonthly">Monthly payment</label>
             <input type="text" class="form-control" id="outputMonthly" disabled />
+          </div>
+        </div>
+        <div class="tab-pane fade" id="calculateLength" role="tabpanel" aria-labelledby="length-tab">
+          <form class="mb-4 p-4 border" id="lengthForm">
+            <div class="form-group">
+              <label for="l-principal">Principal</label>
+              <input type="text" class="form-control" id="l-principal" pattern="^[+-]?([0-9,]+([.][0-9,]*)?|[.][0-9,]+)$" required/>
+            </div>
+            <div class="form-group">
+              <label for="l-monthly">Monthly</label>
+              <input type="text" class="form-control" id="l-monthly" pattern="^[+-]?([0-9,]+([.][0-9,]*)?|[.][0-9,]+)$" required/>
+            </div>
+            <div class="form-group">
+              <label for="l-rate">Rate</label>
+              <input type="text" class="form-control" id="l-rate" pattern="^[+-]?([0-9,]+([.][0-9,]*)?|[.][0-9,]+)$" required/>
+            </div>
+            <button type="submit" class="btn btn-primary">Calculate</button>
+          </form>
+          
+          <div class="form-group">
+            <label for="outputLength">Remaining Months</label>
+            <input type="text" class="form-control" id="outputLength" disabled />
           </div>
         </div>
       </div>
