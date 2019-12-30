@@ -5,9 +5,9 @@ $(function(){
   });
   
   function numberWithCommas(x) {
-    // 20 is the max
-    return parseFloat(x.toString().replace(/\,/g,'')).toLocaleString('en-US', {maximumFractionDigits: 20});
-    //return x.toString().replace(/\,/g,'').replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    // match the first part of a number
+    // then replace them with commas
+    return x.toString().replace(/\,/g,'').replace(/^.*?\d+(?=[.]|$)/g, (str) => str.replace(/\B(?=(\d{3})+(?!\d)(?=[.]|$))/g, ","));
   }
   
   $("input").on("keyup", function(evt){
