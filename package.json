@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/kevinaangstadt/mortcalc#readme",
   "devDependencies": {
-    "electron": "^18.2.0",
+    "electron": "^18.3.7",
     "electron-packager": "^15.5.1",
     "png2icons": "^2.0.1"
   },
